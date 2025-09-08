@@ -1,0 +1,348 @@
+/* RESET E CONFIGURAÇÕES GLOBAIS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --primary-purple: #5D12D2;
+    --secondary-lilac: #B931FC;
+    --accent-pink: #FF6AC2;
+    --soft-pink-bg: #FFE5E5;
+    --dark-text: #1a1a1a;
+    --light-text: #f0f0f0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--light-text);
+    color: var(--dark-text);
+}
+
+/* CABEÇALHO E NAVEGAÇÃO */
+header {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.navbar {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+
+.logo {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--primary-purple);
+}
+
+.logo .cursor {
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+    50% { opacity: 0; }
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--dark-text);
+    font-weight: 600;
+    transition: color 0.3s ease;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-pink);
+    transition: width 0.4s ease;
+}
+
+.nav-links a:hover {
+    color: var(--primary-purple);
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* SEÇÃO INICIAL (HERO) */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--light-text);
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(45deg, var(--primary-purple), var(--secondary-lilac));
+}
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.hero-content {
+    z-index: 2;
+    max-width: 1000px;
+    padding: 0 2rem;
+}
+
+.hero-content h1 {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    height: 120px; /* Altura fixa para evitar pulos */
+}
+
+.hero-content p {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+}
+
+.cta-button {
+    background: var(--accent-pink);
+    color: white;
+    padding: 15px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.cta-button:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(255, 106, 194, 0.4);
+}
+
+/* SEÇÕES DE CONTEÚDO */
+.content-section {
+    padding: 6rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+.content-section-dark {
+    padding: 6rem 2rem;
+    background-color: var(--dark-text);
+    color: var(--light-text);
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    font-weight: 700;
+}
+
+.highlight-pink { color: var(--accent-pink); }
+.highlight-purple { color: var(--primary-purple); }
+.highlight-soft-pink { color: var(--soft-pink-bg); }
+
+/* SEÇÃO SOBRE */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    text-align: left;
+}
+.about-text {
+    flex: 1;
+}
+.about-text p {
+    margin-bottom: 1rem;
+    line-height: 1.8;
+}
+.about-image {
+    flex: 1;
+}
+.about-image img {
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: -15px 15px 0px var(--soft-pink-bg);
+}
+
+/* SEÇÃO ENTREVISTA */
+.interview-container {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.interview-photo {
+    flex: 0 0 300px; /* Não cresce, não encolhe, base de 300px */
+}
+.interview-photo img {
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid var(--accent-pink);
+}
+.interview-qa {
+    flex: 1;
+    text-align: left;
+}
+
+.accordion-item {
+    border-bottom: 1px solid var(--secondary-lilac);
+}
+.accordion-header {
+    background: none;
+    border: none;
+    width: 100%;
+    text-align: left;
+    padding: 1.5rem 0;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--light-text);
+    cursor: pointer;
+    position: relative;
+}
+.accordion-header::after {
+    content: '+';
+    position: absolute;
+    right: 10px;
+    font-size: 1.5rem;
+    color: var(--accent-pink);
+    transition: transform 0.3s ease;
+}
+.accordion-header.active::after {
+    transform: rotate(45deg);
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease;
+}
+.accordion-content p {
+    padding: 0 1rem 1.5rem 1rem;
+    line-height: 1.7;
+    color: #ccc;
+}
+
+/* SEÇÃO DESAFIOS */
+.challenges-container {
+    display: flex;
+    gap: 2rem;
+    justify-content: center;
+}
+.challenge-card {
+    background-color: white;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+    flex: 1;
+    max-width: 400px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.challenge-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(93, 18, 210, 0.2);
+}
+.card-icon {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+}
+.code-icon { color: var(--primary-purple); }
+.mentor-icon { color: var(--accent-pink); }
+
+.challenge-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+.challenge-card p {
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+.card-button {
+    text-decoration: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-weight: 600;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+.challenge-card:first-child .card-button {
+    background-color: var(--primary-purple);
+}
+.challenge-card:first-child .card-button:hover {
+    background-color: #4a0da8;
+}
+.challenge-card:last-child .card-button {
+    background-color: var(--accent-pink);
+}
+.challenge-card:last-child .card-button:hover {
+    background-color: #e652a9;
+}
+
+/* SEÇÃO CONTATO */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 600px;
+    margin: 2rem auto 0 auto;
+    gap: 1rem;
+}
+.contact-form input, .contact-form textarea {
+    border: 2px solid var(--secondary-lilac);
+    background: #2a2a2a;
+    padding: 15px;
+    border-radius: 10px;
+    color: var(--light-text);
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+}
+.contact-form input:focus, .contact-form textarea:focus {
+    outline: none;
+    border-color: var(--accent-pink);
+}
+.contact-form button {
+    align-self: center;
+}
+
+/* RODAPÉ */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--dark-text);
+    color: #888;
+}
