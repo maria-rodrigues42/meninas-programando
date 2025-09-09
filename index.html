@@ -8,56 +8,80 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
-
     <header>
         <nav class="navbar">
-            <div class="logo">Meninas Programando <span class="cursor">_</span></div>
-            <ul class="nav-links">
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#sobre">O Projeto</a></li>
-                <li><a href="#entrevista">Entrevista</a></li>
-                <li><a href="#desafios">Como Ajudar</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
+    <div class="logo">
+        Meninas Programando <span class="cursor">_</span>
+    </div>
+
+    <!-- Botão do menu hamburguer -->
+<div id="mobile-menu" class="menu-toggle">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+</div>
+
+
+    <ul class="nav-links">
+        <li><a href="#inicio">Apresentação</a></li>
+        <li><a href="#sobre-demandante">Sobre o Demandante</a></li>
+        <li><a href="#demanda">Demanda</a></li>
+        <li><a href="#desafios">Desafios</a></li>
+        <li><a href="#estudantes">Estudantes</a></li>
+    </ul>
+</nav>
+
     </header>
 
     <main>
+        <!-- primeira dobra-->
         <section id="inicio" class="hero-section">
             <div id="particles-js"></div>
             <div class="hero-content">
-                <h1><span id="typing-effect"></span></h1>
+                <h1>
+                    <span id="typing-effect"></span>
+                </h1>
                 <p>Capacitando a próxima geração de mulheres líderes na tecnologia.</p>
-                <a href="#desafios" class="cta-button">Faça Parte da Mudança</a>
+                <a href="https://youtu.be/dXwKapbUJ1c" class="cta-button">Assista nossa entrevista!</a>
             </div>
         </section>
 
-        <section id="sobre" class="content-section">
-            <h2>O Futuro é <span class="highlight-pink">Feminino</span> e <span class="highlight-purple">Tecnológico</span>.</h2>
+        <!-- segunda dobra-->
+        <section id="sobre-demandante" class="content-section">
+            <h2>Quem é o Demandante?</h2>
             <div class="about-container">
                 <div class="about-text">
-                    <p>O projeto "Meninas Programando" nasceu do sonho de ver mais meninas e mulheres ocupando espaços na área de tecnologia. Nossa missão é despertar o interesse, desmistificar a programação e criar uma rede de apoio para que meninas do ensino médio possam trilhar um caminho de sucesso na tecnologia, independentemente de suas origens.</p>
-                    <p>Através de workshops, palestras inspiradoras e mentorias, oferecemos as ferramentas e a confiança necessárias para que elas se tornem as criadoras do futuro.</p>
+                    <p>
+                        O demandante deste projeto é a Professora Márcia, idealizadora do Meninas Programando. O projeto nasceu do sonho de ver mais meninas e mulheres ocupando espaços na área de tecnologia.
+                    </p>
+                    <p>
+                        Como começou: A iniciativa surgiu a partir da observação da baixa representatividade feminina em eventos e cursos de tecnologia. A principal atividade do projeto é promover workshops, palestras e mentorias para despertar o interesse e apoiar meninas do ensino médio.
+                    </p>
                 </div>
                 <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1556441943-04bde442f2b3?q=80&w=2070&auto=format&fit=crop" alt="Meninas programando juntas em um notebook">
+                    <img src="https://engineering.tufts.edu/sites/g/files/lrezom421/files/styles/large/public/newsthumbs/news-201904-girlsofcode.jpg?itok=XvZHHcIZ" alt="Foto da Professora Márcia">
                 </div>
             </div>
         </section>
 
-        <section id="entrevista" class="content-section-dark">
-            <h2>Palavra da Idealizadora: <span class="highlight-soft-pink">Professora Márcia</span></h2>
+        <!-- terceira dobra -->
+       
+
+        </section>
+                <section id="demanda" class="content-section-dark">
+            <h2>Principal demanda: <span class="highlight-soft-pink">Meninas na programação</span></h2>
             <div class="interview-container">
                 <div class="interview-photo">
-                    <img src="https://images.unsplash.com/photo-1581093450021-4a7360e9a6b5?q=80&w=1887&auto=format&fit=crop" alt="Foto da Professora Márcia">
+                    <img src="https://engineering.tufts.edu/sites/g/files/lrezom421/files/styles/large/public/newsthumbs/news-201904-girlsofcode.jpg?itok=XvZHHcIZ" alt="Foto da Professora Márcia">
                 </div>
                 <div class="interview-qa">
                     <div class="accordion-item">
-                        <button class="accordion-header">Qual a principal dificuldade do projeto?</button>
+                        <button class="accordion-header">Qual a nossa principal demanda?</button>
                         <div class="accordion-content">
-                            <p>A principal dificuldade, sem dúvida, é a falta de renda. Muitas de nossas ações dependem de verba para acontecer, como o deslocamento das alunas para eventos, a organização de palestras com convidados e até mesmo para oferecer um lanche durante os encontros. Isso limita nosso alcance e impacto.</p>
+                            <p> A principal demanda do projeto é ampliar o alcance das atividades, superando barreiras como falta de recursos financeiros e voluntárias universitárias para mentoria. A ideia é criar uma rede de apoio mais forte, garantindo que mais meninas possam participar e se desenvolver na área de tecnologia.</p>
                         </div>
                     </div>
                     <div class="accordion-item">
@@ -69,34 +93,78 @@
                 </div>
             </div>
         </section>
-
         <section id="desafios" class="content-section">
-            <h2>Nossos Desafios & <span class="highlight-purple">Sua Oportunidade</span> de Ajudar</h2>
-            <div class="challenges-container">
-                <div class="challenge-card">
-                    <div class="card-icon code-icon">&lt;/&gt;</div>
-                    <h3>Falta de Renda</h3>
-                    <p>Custos com transporte, eventos e materiais didáticos são barreiras constantes. Sua doação permite que mais meninas participem ativamente e que o projeto continue a crescer.</p>
-                    <a href="#" class="card-button">Apoiar Financeiramente</a>
+                <h2>
+                    Nossos Desafios & <span class="highlight-purple">Sua Oportunidade</span> de Ajudar
+                </h2>
+                <div class="challenges-container">
+                    <div class="challenge-card">
+                        <div class="card-icon code-icon">
+                            <i class="fa-solid fa-coins"></i>
+                        </div>
+                        <h3>Falta de Renda</h3>
+                        <p>
+                            Custos com transporte, eventos e materiais didáticos são barreiras constantes. Sua doação permite que mais meninas participem ativamente e que o projeto continue a crescer.
+                        </p>
+                        <a href="#contato" class="card-button">Apoiar Financeiramente</a>
+                    </div>
+                    <div class="challenge-card">
+                        <div class="card-icon mentor-icon">
+                            <i class="fa-solid fa-hands-helping"></i>
+                        </div>
+                        <h3>Poucos "Braços"</h3>
+                        <p>
+                            Precisamos de mais voluntárias, especialmente universitárias, para mentorar nossas alunas e ajudar na organização. Seu tempo e conhecimento são incrivelmente valiosos.
+                        </p>
+                        <a href="#contato" class="card-button">Quero ser Mentora</a>
+                    </div>
                 </div>
-                <div class="challenge-card">
-                    <div class="card-icon mentor-icon">★</div>
-                    <h3>Poucos "Braços"</h3>
-                    <p>Precisamos de mais voluntárias, especialmente universitárias, para mentorar nossas alunas e ajudar na organização. Seu tempo e conhecimento são incrivelmente valiosos.</p>
-                    <a href="#contato" class="card-button">Quero ser Mentora</a>
-                </div>
-            </div>
-        </section>
+            </section>
 
+        <!-- quarta dobra -->
+        <section id="estudantes" class="content-section">
+    <h2>Nossos Estudantes</h2>
+    <p class="section-description">
+        Conheça as mentes brilhantes que estão transformando o futuro da tecnologia.
+    </p>
+    <div class="estudantes-simples">
+        <div class="estudante-card">
+            <div class="icone-simples">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <h3>Giullia Meneses</h3>
+        </div>
+        <div class="estudante-card">
+            <div class="icone-simples">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <h3>Maria Eduarda</h3>
+        </div>
+        <div class="estudante-card">
+            <div class="icone-simples">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <h3>Caroline</h3>
+        </div>
+        <div class="estudante-card">
+            <div class="icone-simples">
+                <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <h3>Jaqueline</h3>
+        </div>
+    </div>
+</section>
         <section id="contato" class="content-section-dark">
-             <h2>Conecte-se com a gente!</h2>
-             <p>Envie sua dúvida, sugestão ou proposta de parceria. Vamos adorar conversar!</p>
-             <form class="contact-form">
-                 <input type="text" name="name" placeholder="Seu Nome" required>
-                 <input type="email" name="email" placeholder="Seu Melhor E-mail" required>
-                 <textarea name="message" rows="5" placeholder="Sua Mensagem" required></textarea>
-                 <button type="submit" class="cta-button">Enviar Mensagem</button>
-             </form>
+            <h2>Conecte-se com a gente!</h2>
+            <p>
+                Envie sua dúvida, sugestão ou proposta de parceria. Vamos adorar conversar!
+            </p>
+            <form class="contact-form">
+                <input type="text" name="name" placeholder="Seu Nome" required>
+                <input type="email" name="email" placeholder="Seu Melhor E-mail" required>
+                <textarea name="message" rows="5" placeholder="Sua Mensagem" required></textarea>
+                <button type="submit" class="cta-button">Enviar Mensagem</button>
+            </form>
         </section>
     </main>
 

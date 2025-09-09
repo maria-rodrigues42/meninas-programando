@@ -1,4 +1,4 @@
-
+/* RESET E CONFIGURAÇÕES GLOBAIS */
 * {
     margin: 0;
     padding: 0;
@@ -21,6 +21,7 @@ body {
     color: var(--dark-text);
 }
 
+/* CABEÇALHO E NAVEGAÇÃO */
 header {
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
@@ -32,12 +33,12 @@ header {
 }
 
 .navbar {
-    max-width: 1200px;
-    margin: 0 auto;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-between; /* Mantém logo à esquerda e menu à direita */
     align-items: center;
-    padding: 1rem 2rem;
+    flex-wrap: wrap;
+    padding: 16px;
+    position: relative;
 }
 
 .logo {
@@ -45,6 +46,7 @@ header {
     font-size: 1.5rem;
     font-weight: 700;
     color: var(--primary-purple);
+    flex: 0 0 auto; /* Não cresce, não encolhe */
 }
 
 .logo .cursor {
@@ -56,9 +58,13 @@ header {
 }
 
 .nav-links {
-    list-style: none;
     display: flex;
-    gap: 2rem;
+    gap: 24px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    flex: 0 0 auto; /* Não cresce, não encolhe */
 }
 
 .nav-links a {
@@ -89,7 +95,22 @@ header {
     width: 100%;
 }
 
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
 
+.menu-toggle .bar {
+    width: 28px;
+    height: 4px;
+    background: #a84fa8;
+    border-radius: 2px;
+    display: block;
+}
+
+/* SEÇÃO INICIAL (HERO) */
 .hero-section {
     height: 100vh;
     display: flex;
@@ -121,7 +142,7 @@ header {
     font-family: 'Roboto Mono', monospace;
     font-size: 3.5rem;
     margin-bottom: 1rem;
-    height: 120px;
+    height: 120px; /* Altura fixa para evitar pulos */
 }
 
 .hero-content p {
@@ -147,7 +168,7 @@ header {
     box-shadow: 0 10px 20px rgba(255, 106, 194, 0.4);
 }
 
-
+/* SEÇÕES DE CONTEÚDO */
 .content-section {
     padding: 6rem 2rem;
     max-width: 1200px;
@@ -171,7 +192,7 @@ h2 {
 .highlight-purple { color: var(--primary-purple); }
 .highlight-soft-pink { color: var(--soft-pink-bg); }
 
-
+/* SEÇÃO SOBRE */
 .about-container {
     display: flex;
     align-items: center;
@@ -194,7 +215,7 @@ h2 {
     box-shadow: -15px 15px 0px var(--soft-pink-bg);
 }
 
-
+/* SEÇÃO ENTREVISTA */
 .interview-container {
     display: flex;
     align-items: center;
@@ -203,7 +224,7 @@ h2 {
     margin: 0 auto;
 }
 .interview-photo {
-    flex: 0 0 300px;
+    flex: 0 0 300px; /* Não cresce, não encolhe, base de 300px */
 }
 .interview-photo img {
     width: 100%;
@@ -255,7 +276,7 @@ h2 {
     color: #ccc;
 }
 
-
+/* SEÇÃO DESAFIOS */
 .challenges-container {
     display: flex;
     gap: 2rem;
@@ -313,7 +334,7 @@ h2 {
     background-color: #e652a9;
 }
 
-
+/* SEÇÃO CONTATO */
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -338,10 +359,206 @@ h2 {
     align-self: center;
 }
 
-
+/* RODAPÉ */
 footer {
     text-align: center;
     padding: 2rem;
     background-color: var(--dark-text);
     color: #888;
+}
+
+/* ESTUDANTES RESPONSÁVEIS */
+/* Seção de Estudantes Simplificada */
+.estudantes-simples {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin-top: 2rem;
+}
+
+.estudante-card {
+    background-color: #F8FAFC;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    max-width: 250px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #D1D5DB;
+}
+
+.estudante-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.icone-simples {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: #8B5CF6;
+}
+
+.estudante-card h3 {
+    font-size: 1.5rem;
+    margin: 0;
+    color: #2D3748;
+}
+
+/* ========================= */
+/* ESTILIZAÇÃO RESPONSIVA */
+/* ========================= */
+
+/* Para telas menores que 1024px (tablets em modo paisagem) */
+@media (max-width: 1024px) {
+    .navbar {
+        padding: 1rem 3%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        margin-top: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .nav-links li {
+        margin: 0.5rem 1rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .about-container,
+    .interview-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-image,
+    .interview-photo {
+        margin-top: 2rem;
+    }
+
+    .challenges-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Para telas menores que 768px (tablets em modo retrato e smartphones grandes) */
+@media (max-width: 768px) {
+    .content-section,
+    .content-section-dark {
+        padding: 4rem 5%;
+    }
+
+    .content-section h2,
+    .content-section-dark h2 {
+        font-size: 2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .cta-button {
+        padding: 0.7rem 1.5rem;
+    }
+
+    .about-container {
+        gap: 2rem;
+    }
+
+    .about-image img,
+    .interview-photo img {
+        width: 100%;
+    }
+
+    .accordion-header {
+        font-size: 1rem;
+    }
+
+    .accordion-content {
+        padding: 0 1rem;
+    }
+}
+
+/* Para telas menores que 800px (smartphones) */
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: flex-start; /* Alinha tudo à esquerda */
+        align-items: center;
+        position: relative;
+    }
+    .logo {
+        margin-right: auto; /* Empurra o resto para a direita */
+    }
+    .menu-toggle {
+        display: flex;
+        margin-left: 0;
+    }
+    .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        left: auto;
+        width: 70vw;
+        background: #fff;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 0;
+        padding: 16px 0;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+        display: none;
+        z-index: 100;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+}
+
+/* Para telas menores que 480px (smartphones) */
+@media (max-width: 480px) {
+    .navbar {
+        padding: 1rem 5%;
+    }
+    
+    .nav-links {
+        display: none; /* Esconde a navegação para um menu hambúrguer, que precisaria de JS */
+    }
+
+    .logo {
+        font-size: 1.2rem;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .hero-content p {
+        font-size: 0.9rem;
+    }
+
+    .content-section h2,
+    .content-section-dark h2 {
+        font-size: 1.8rem;
+    }
+
+    .challenge-card,
+    .estudante-card {
+        padding: 2rem 1rem;
+        width: 100%;
+    }
+
+    .estudantes-simples {
+        gap: 2rem;
+    }
 }
