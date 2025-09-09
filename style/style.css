@@ -1,4 +1,4 @@
-/* RESET E CONFIGURAÇÕES GLOBAIS */
+
 * {
     margin: 0;
     padding: 0;
@@ -21,7 +21,6 @@ body {
     color: var(--dark-text);
 }
 
-/* CABEÇALHO E NAVEGAÇÃO */
 header {
     background-color: rgba(255, 255, 255, 0.8);
     backdrop-filter: blur(10px);
@@ -90,7 +89,7 @@ header {
     width: 100%;
 }
 
-/* SEÇÃO INICIAL (HERO) */
+
 .hero-section {
     height: 100vh;
     display: flex;
@@ -122,7 +121,7 @@ header {
     font-family: 'Roboto Mono', monospace;
     font-size: 3.5rem;
     margin-bottom: 1rem;
-    height: 120px; /* Altura fixa para evitar pulos */
+    height: 120px;
 }
 
 .hero-content p {
@@ -148,7 +147,7 @@ header {
     box-shadow: 0 10px 20px rgba(255, 106, 194, 0.4);
 }
 
-/* SEÇÕES DE CONTEÚDO */
+
 .content-section {
     padding: 6rem 2rem;
     max-width: 1200px;
@@ -172,7 +171,7 @@ h2 {
 .highlight-purple { color: var(--primary-purple); }
 .highlight-soft-pink { color: var(--soft-pink-bg); }
 
-/* SEÇÃO SOBRE */
+
 .about-container {
     display: flex;
     align-items: center;
@@ -195,7 +194,7 @@ h2 {
     box-shadow: -15px 15px 0px var(--soft-pink-bg);
 }
 
-/* SEÇÃO ENTREVISTA */
+
 .interview-container {
     display: flex;
     align-items: center;
@@ -204,7 +203,7 @@ h2 {
     margin: 0 auto;
 }
 .interview-photo {
-    flex: 0 0 300px; /* Não cresce, não encolhe, base de 300px */
+    flex: 0 0 300px;
 }
 .interview-photo img {
     width: 100%;
@@ -256,7 +255,7 @@ h2 {
     color: #ccc;
 }
 
-/* SEÇÃO DESAFIOS */
+
 .challenges-container {
     display: flex;
     gap: 2rem;
@@ -314,7 +313,7 @@ h2 {
     background-color: #e652a9;
 }
 
-/* SEÇÃO CONTATO */
+
 .contact-form {
     display: flex;
     flex-direction: column;
@@ -339,7 +338,7 @@ h2 {
     align-self: center;
 }
 
-/* RODAPÉ */
+
 footer {
     text-align: center;
     padding: 2rem;
