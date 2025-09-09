@@ -2,7 +2,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const text_digi = document.querySelector('#typing-effect');
 
-    // Animação de digitação na tela inicial
     if (text_digi) {
         new Typed('#typing-effect', {
             strings: ['Meninas que Programam', 'Mulheres que Inovam', 'O Futuro da Tecnologia'],
@@ -14,7 +13,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Animação de partículas no fundo
+    //animacao do fundo
     if (document.querySelector('#particles-js')) {
         particlesJS('particles-js', {
             "particles": {
@@ -35,34 +34,23 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // --- LÓGICA DO ACCORDION PARA A ENTREVISTA ---
-    
-    // 1. Encontra todos os botões que abrem e fecham as respostas.
     const accordionHeaders = document.querySelectorAll('.accordion-header');
 
-    // 2. Para cada botão encontrado, adiciona a funcionalidade de clique.
     accordionHeaders.forEach(header => {
         header.addEventListener('click', () => {
-            // 3. Pega o conteúdo da resposta, que é o elemento logo após o botão.
             const content = header.nextElementSibling;
             
-            // 4. Verifica se o item clicado já está aberto.
             const isActive = header.classList.contains('active');
 
-            // 5. PRIMEIRO, fecha todos os itens que estiverem abertos.
-            // Isso garante que apenas um fique aberto por vez.
             accordionHeaders.forEach(h => {
                 h.classList.remove('active');
                 h.nextElementSibling.style.maxHeight = null;
             });
 
-            // 6. SE o item clicado não estava aberto, ele será aberto agora.
             if (!isActive) {
                 header.classList.add('active');
-                // A mágica acontece aqui: a altura do conteúdo é calculada e aplicada.
                 content.style.maxHeight = content.scrollHeight + 'px';
             }
-            // Se já estava aberto, o passo 5 já cuidou de fechá-lo.
         });
     });
 });
